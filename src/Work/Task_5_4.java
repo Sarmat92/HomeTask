@@ -11,7 +11,11 @@ public class Task_5_4 {
 
         String str = "разделяем строку на слова на строку разделяем на";
         String[] arrayStr = str.split("\\s");
-       // String s = Arrays.toString(arrayStr);
+
+        /*
+        Сделал через Мар, но мы его еще не разбирали. В целом, ничего сложного нет,
+        но есть вопросы. Ниже обыкновенный вариант!
+         */
 
        /* Map<String, Integer> mp = new HashMap<String, Integer>();
         int count = 0;
@@ -30,17 +34,20 @@ public class Task_5_4 {
         */
 
 
+        /*
+        Почти получается, но чего-то не хватает!!!
+         */
+
         int count = 0;
         for (int i = 0; i < arrayStr.length; i++) {
             count = 0;
             for (int j = 0; j < arrayStr.length; j++) {
-                if (arrayStr[i].equalsIgnoreCase(arrayStr[j])){
+                if (arrayStr[i].equalsIgnoreCase(arrayStr[j])) {
                     count++;
                 }
             }
-           System.out.println(arrayStr[i] + " " + count);
+            System.out.println(arrayStr[i] + " " + count);
         }
-
 
 
     }
