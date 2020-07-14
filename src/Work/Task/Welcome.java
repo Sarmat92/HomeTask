@@ -2,7 +2,7 @@ package Work.Task;
 
 public class Welcome extends Provider {
 
-    String clients;
+    private String clients;
 
     public Welcome(String orgName, int numberOfClients, int tarif, String clients) {
         super(orgName, numberOfClients, tarif);

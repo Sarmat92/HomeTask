@@ -1,16 +1,50 @@
 package Work.Task;
 
-public class Provider {
+public abstract class Provider implements Status, Comparable<Provider> {
 
-   private String orgName;
-   private int numberOfClients;
-   private int tarif;
+    private String orgName;
+    private int numberOfClients;
+    private int tarif;
+    private boolean state = false;
 
     public Provider(String orgName, int numberOfClients, int tarif) {
         this.orgName = orgName;
         this.numberOfClients = numberOfClients;
         this.tarif = tarif;
     }
+
+
+    @Override
+    public int active() {
+        if (state) {
+            return 0;
+        }
+        state = true;
+        System.out.println("Я активен " + orgName + " и у меня " + numberOfClients + " довольных клиентов.");
+        return 0;
+    }
+
+    @Override
+    public int blocked() {
+        if (!state) {
+            return 0;
+        }
+        state = false;
+        System.out.println("Я заблокирован " + orgName + " и у меня " + numberOfClients + " несчастных клиентов.");
+        return 0;
+    }
+
+
+    @Override
+    public int compareTo(Provider o) {
+        if (numberOfClients > o.numberOfClients) {
+            return 1;
+        } else if (numberOfClients < o.numberOfClients) {
+            return -1;
+        }
+        return 0;
+    }
+
 
     public String getOrgName() {
         return orgName;
@@ -35,6 +69,7 @@ public class Provider {
     public void setTarif(int tarif) {
         this.tarif = tarif;
     }
+
 
     @Override
     public String toString() {

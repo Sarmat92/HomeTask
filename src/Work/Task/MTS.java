@@ -2,7 +2,7 @@ package Work.Task;
 
 public class MTS extends Provider {
 
-    String parking;
+    private String parking;
 
     public MTS(String orgName, int numberOfClients, int tarif, String parking) {
         super(orgName, numberOfClients, tarif);

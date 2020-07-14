@@ -2,7 +2,7 @@ package Work.Task;
 
 public class Life extends Provider {
 
-    int gratis;
+    private int gratis;
 
     public Life(String orgName, int numberOfClients, int tarif, int gratis) {
         super(orgName, numberOfClients, tarif);
