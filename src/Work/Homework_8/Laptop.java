@@ -1,6 +1,6 @@
 package Work.Homework_8;
 
-public class Laptop<S,I> {
+public class Laptop<S, I> {
 
     private S name;
     private I HDD;
@@ -35,7 +35,7 @@ public class Laptop<S,I> {
     }
 
 
-   private class MouseForLaptop {
+    private class MouseForLaptop {
         public void click() {
             System.out.println("click - click");
         }
