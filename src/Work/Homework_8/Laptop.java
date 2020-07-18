@@ -1,17 +1,29 @@
-package Work;
+package Work.Homework_8;
 
-public class Laptop {
+public class Laptop<S,I> {
 
-    private String name;
-    private int HDD;
+    private S name;
+    private I HDD;
+    private MouseForLaptop mouseForLaptop;
+    private CaseForLaptop caseForLaptop;
 
-    public Laptop(String name, int HDD) {
+    public Laptop(S name, I HDD) {
         this.name = name;
         this.HDD = HDD;
+        mouseForLaptop = new MouseForLaptop();
+        caseForLaptop = new CaseForLaptop();
+
     }
 
     public void information() {
+
+        caseForLaptop.toGet();
+        mouseForLaptop.ring();
+        mouseForLaptop.click();
+        caseForLaptop.hide();
+
         System.out.println("Для захвата мира использоваля " + name + " " + HDD + "Гб.");
+
     }
 
     public void on() {
@@ -23,7 +35,7 @@ public class Laptop {
     }
 
 
-    public class MouseForLaptop {
+   private class MouseForLaptop {
         public void click() {
             System.out.println("click - click");
         }
@@ -34,7 +46,7 @@ public class Laptop {
     }
 
 
-    public class CaseForLaptop {
+    private class CaseForLaptop {
         public void toGet() {
             System.out.println("Достали ноутбук!");
         }
@@ -44,22 +56,4 @@ public class Laptop {
         }
 
     }
-
-    public static void main(String[] args) {
-
-        Laptop myLaptop = new Laptop("HP", 256);
-        Laptop.MouseForLaptop myMouse = myLaptop.new MouseForLaptop();
-        Laptop.CaseForLaptop myCase = myLaptop.new CaseForLaptop();
-
-        myCase.toGet();
-        myLaptop.on();
-        myMouse.click();
-        myMouse.ring();
-        myLaptop.off();
-        myCase.hide();
-        myLaptop.information();
-
-
-    }
-
 }
