@@ -25,7 +25,7 @@ public class Task_9_2 {
 
     public static void main(String[] args) {
 
-        System.out.println("Можешь вводить любое число, ты. Но помни: любое слово поломит метод сей!");
+        System.out.println("Введите текст. Цивры закроют метод.");
 
         ArrayList<Integer> list = new ArrayList<>();
 

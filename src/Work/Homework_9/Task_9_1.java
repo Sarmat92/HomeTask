@@ -1,9 +1,6 @@
 package Work.Homework_9;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Task_9_1 {
 
