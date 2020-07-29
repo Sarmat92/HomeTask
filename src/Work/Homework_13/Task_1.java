@@ -11,34 +11,19 @@ public class Task_1 {
 
     public static void main(String[] args) {
 
-        /*String array = "akj kjg aok aifj okg rgorg jgas";
-        
-        String[]arrayStr = array.split(" ");
-
-        Arrays.stream(arrayStr)
-
-                .filter(s -> s.contains("a"))
-                .collect(Collectors.toList())
-                .forEach(System.out::println);*/
-
-
-
-
-
-       /* List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         list.add("ajh");
         list.add("sda");
         list.add("vas");
         list.add("kjj");
+        list.add("AML");
 
         list.stream()
-                .filter(s->s.charAt(0))
-                .filter(s->s.equalsIgnoreCase("a"))
+                .map(String::toLowerCase)
+                .filter(s -> s.charAt(0) == 'a')  // и так можно
+                .filter(s -> s.startsWith("a"))   // и вот так можно
                 .collect(Collectors.toList())
-                .forEach(System.out::println);*/
-
-
-
+                .forEach(System.out::println);
 
 
     }
