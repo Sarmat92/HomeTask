@@ -19,8 +19,8 @@ public class Homework_11 {
 
             try {
 
-                int firstNum = scan.nextInt();
-                int secondNum = scan.nextInt();
+                int firstNum = Integer.parseInt(scan.next());
+                int secondNum = Integer.parseInt(scan.next());
 
                 System.out.println(calc(firstNum, secondNum));
 
@@ -28,13 +28,15 @@ public class Homework_11 {
 
             } catch (ArithmeticException e) {
                 System.out.println("Нельзя делить на ноль, лох!" + '\n' + e);
-
+            } catch (NumberFormatException e) {
+                System.out.println("Вводи только цифры, рукажоп!" + '\n' + e);
             } catch (InputMismatchException e) {
-                System.out.println("Вводи только цифры, рукожоп!" + '\n' + e);
+                System.out.println("Вводим только цифры! " + '\n' + e);
+
             } finally {
                 System.out.println("Всегда будет выполняться!");
             }
-        }while (repeat);
+        } while (repeat);
     }
 
 }
