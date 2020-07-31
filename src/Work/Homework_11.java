@@ -27,9 +27,9 @@ public class Homework_11 {
                 repeat = false;
 
             } catch (ArithmeticException e) {
-                System.out.println("Нельзя делить на ноль, лох!" + '\n' + e);
+                System.out.println("Нельзя делить на ноль!" + '\n' + e);
             } catch (NumberFormatException e) {
-                System.out.println("Вводи только цифры, рукажоп!" + '\n' + e);
+                System.out.println("Вводи только цифры!" + '\n' + e);
             } catch (InputMismatchException e) {
                 System.out.println("Вводим только цифры! " + '\n' + e);
 
